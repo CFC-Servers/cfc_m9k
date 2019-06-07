@@ -1,3 +1,5 @@
+AddCSLuaFile()
+
 CFC_M9k_Stubber = {}
 
 local stubQueue = {}
