@@ -5,6 +5,6 @@ CFC_M9k_Stubber.registerStub(function()
     
     weapon.Primary.ClipSize = 1
     weapon.Primary.Damage = 110
-    weapon.Primary.Spread = .07
+    weapon.Primary.Spread = .1
     weapon.Primary.IronAccuracy = .001
 end)
