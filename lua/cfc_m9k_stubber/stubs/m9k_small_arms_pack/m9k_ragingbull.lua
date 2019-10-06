@@ -1,7 +1,7 @@
 if SERVER then AddCSLuaFile() end
 
-CFC_M9k_Stubber.registerStub(function()
-    local weapon = weapons.GetStored("m9k_ragingbull")
+CFC_M9k_Stubber.registerStub( function()
+    local weapon = weapons.GetStored( "m9k_ragingbull" )
 
     weapon.Category = "M9K Shotguns"
     weapon.PrintName = "Raging Judge"
@@ -11,4 +11,4 @@ CFC_M9k_Stubber.registerStub(function()
     weapon.Primary.Damage = 25
     weapon.Primary.Spread = .06
     weapon.Primary.IronAccuracy = .06
-end)
+end )
