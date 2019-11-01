@@ -30,7 +30,7 @@ end
 local function m9kIsLoaded()
     -- "m9k_winchester73" is the last weapon listed alphabetically in the last pack defined, so it'll likely be the last one loaded?
     -- in any case it shouldn't matter too much. they're all loaded within ms of eachother
-    return weapons.GetStored( "m9k_winchester73" ) != nil
+    return weapons.GetStored( "m9k_winchester73" ) ~= nil
 end
 
 local function runStubs()
