@@ -6,15 +6,15 @@ M9K_FOLDER_PREFIX = 'm9k_'
 THIS_DIR = os.path.abspath('.')
 
 LUA_HEADER =  'if SERVER then AddCSLuaFile() end\n\n'
-LUA_HEADER += 'CFC_M9k_Stubber.registerStub(function()\n'
+LUA_HEADER += 'CFC_M9k_Stubber.registerStub( function()\n'
 
-LUA_FOOTER = 'end)'
+LUA_FOOTER = 'end )'
 
 OUTPUT_DIR = 'test'
 
-SENT_FIRST_LINE = '    local sent = scripted_ents.GetStored("{}").t\n'
+SENT_FIRST_LINE = '    local sent = scripted_ents.GetStored( "{}" ).t\n'
 SENT_VAR_LINES  = '    sent.{} = {}\n'
-WEP_FIRST_LINE  = '    local weapon = weapons.GetStored("{}")\n'
+WEP_FIRST_LINE  = '    local weapon = weapons.GetStored( "{}" )\n'
 WEP_VAR_LINES   = '    weapon.{} = {}\n'
 
 
@@ -81,13 +81,13 @@ def get_key_values_from_lua(filename):
 
 def diff_lua_files(m9k, cfc):
     diff = {}
-    
+
     m9k_dict = get_key_values_from_lua(m9k)
     cfc_dict = get_key_values_from_lua(cfc)
 
     for key in cfc_dict:
         cfc_value = cfc_dict[key]
-        
+
         if key in m9k_dict:
             m9k_value = m9k_dict[key]
 
@@ -103,7 +103,7 @@ def diff_lua_files(m9k, cfc):
             }
 
     return diff
-    
+
 
 def get_lua_files_from_list(files):
     lua_files = []
@@ -112,7 +112,7 @@ def get_lua_files_from_list(files):
             lua_files.append(file)
 
     return lua_files
-    
+
 
 def get_cfc_and_m9k_folders():
     this_dir = os.listdir()

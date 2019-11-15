@@ -1,7 +1,7 @@
 if SERVER then AddCSLuaFile() end
 
-CFC_M9k_Stubber.registerStub(function()
-    local weapon = weapons.GetStored("m9k_minigun")
+CFC_M9k_Stubber.registerStub( function()
+    local weapon = weapons.GetStored( "m9k_minigun" )
 
     weapon.Primary.RPM = 1000
     weapon.Primary.DefaultClip = 100
@@ -11,4 +11,4 @@ CFC_M9k_Stubber.registerStub(function()
     weapon.Primary.Damage = 3
     weapon.Primary.Spread = .08
     weapon.Primary.IronAccuracy = .08
-end)
+end )
