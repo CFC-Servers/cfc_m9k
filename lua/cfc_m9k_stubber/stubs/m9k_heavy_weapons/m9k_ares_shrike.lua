@@ -6,4 +6,5 @@ CFC_M9k_Stubber.registerStub( function()
     weapon.Primary.Ammo = "AirboatGun"
     weapon.Primary.Damage = 20
     weapon.Primary.Spread = .08
+    weapon.Primary.Sound = Sound("Weapon_249M.Single")
 end )
