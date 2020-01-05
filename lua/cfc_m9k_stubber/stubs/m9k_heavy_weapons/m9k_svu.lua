@@ -6,5 +6,5 @@ CFC_M9k_Stubber.registerStub( function()
     weapon.Primary.ClipSize = 5
     weapon.Primary.KickDown = .2
     weapon.Primary.Damage = 55
-    weapon.Primary.Spread = .006
+    weapon.Primary.Spread = .06
 end )
