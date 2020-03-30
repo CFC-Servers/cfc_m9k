@@ -1,3 +1,5 @@
+require( "cfcwaiter" )
+
 AddCSLuaFile()
 
 CFC_M9k_Stubber = {}
@@ -44,19 +46,4 @@ local function handleWaiterTimeout()
     print( "[M9k Stubber] Waiter timed out! Not running stubs!" )
 end
 
-local waiterLoaded = Waiter
-
-if waiterLoaded then
-    print( "[M9k Stubber] Waiter is loaded, registering with it!" )
-    Waiter.waitFor( m9kIsLoaded, runStubs, handleWaiterTimeout )
-else
-    print( "[M9k Stubber] Waiter is not loaded! Inserting our struct into the queue!" )
-    WaiterQueue = WaiterQueue or {}
-
-    local struct = {}
-    struct["waitingFor"] = m9kIsLoaded
-    struct["onSuccess"] = runStubs
-    struct["onTimeout"] = handleWaiterTimeout
-
-    table.insert( WaiterQueue, struct )
-end
+Waiter.waitFor( m9kIsLoaded, runStubs, handleWaiterTimeout )
