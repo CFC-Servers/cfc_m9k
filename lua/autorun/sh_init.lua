@@ -22,8 +22,6 @@ for _, pack in pairs( packs ) do
     for _, stub in next, stubs do
         if stub then
             local stubPath = packPath .. stub
-            print( "[M9k Stubber] Loading " .. stubPath .. "..." )
-
             include( stubPath )
         end
     end
