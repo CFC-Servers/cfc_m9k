@@ -6,4 +6,5 @@ CFC_M9k_Stubber.registerStub( function()
     weapon.Primary.KickDown = .2
     weapon.Primary.Damage = 25
     weapon.Primary.Spread = .06
+    weapon.SelectiveFire = false
 end )
