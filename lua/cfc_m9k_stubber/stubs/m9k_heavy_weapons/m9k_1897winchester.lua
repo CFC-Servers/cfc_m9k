@@ -7,6 +7,4 @@ CFC_M9k_Stubber.registerStub( function()
     weapon.ShellTime = .4
     weapon.Primary.Spread = .1	-- define from-the-hip accuracy ( 1 is terrible, .0001 is exact )
     weapon.Primary.IronAccuracy = .1 -- has to be the same as primary.spread
-    weapon.Primary.ClipSize = 2
-    weapon.Primary.Damage = 12 
 end )
